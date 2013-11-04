@@ -1,0 +1,72 @@
+body{
+width: 730px;
+height: 922px;
+}
+
+div{
+font-family:Tahoma;
+font-size:16px;
+margin:0px;
+}
+
+img{
+	width:30%;
+}
+
+table{
+	width: 100%;
+	text-align: center;
+}
+
+.title{
+	color: #224F8A;
+	background-color: #B4DAF1;
+	text-align: center;
+	font-size:35px;
+	font-family:arian;
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#D2D2D2), to(#B5B5B5));/*Safari 、Chrome*/
+	background:-moz-linear-gradient(top, #D2D2D2, #B5B5B5);/*Firefox*/
+
+}
+
+
+
+.riqi{
+	color: #224F8A;
+	background-color: #B4DAF1;
+}
+
+.name{
+	color: #224F8A;
+	background-color: #CFE6F4;
+	white-space: nowrap;
+}
+
+.name2{
+	color: #224F8A;
+	background-color: #E5F5FF;
+	white-space: nowrap;
+}
+
+.hui{
+	color: #224F8A;
+	background-color: #DDDEE0;
+}
+
+.nai{
+	color: #224F8A;
+	background-color: #EFEFEF;s
+}
+
+
+.huid{
+	font-size:36px;
+	color: #224F8A;
+	background-color: #DDDEE0;
+}
+
+.naid{
+	font-size:36px;
+	color: #224F8A;
+	background-color: #EFEFEF;s
+}

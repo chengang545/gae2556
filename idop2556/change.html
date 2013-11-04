@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+    <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
+
+{% block divmain %}
+    <form action="/change" enctype="multipart/form-data" method="post" class="form-horizontal">
+     
+      <div class="controls">
+      <input type="hidden" value="{{ v.key }}" name="id">
+      <p class="control-group"><label class="control-label">Name (First Name & Last Name in English on Passport):</label><input type="text" value="{{ v.nameen }}" name="nameen" /></p>
+      <p class="control-group"><label class="control-label">Name (First Name and Last Name in Thai  Script):</label><input type="text" value="{{ v.nameth }}" name="nameth" /></p>
+      <p class="control-group"><label class="control-label">Monastic Name (In Pali-Latin Script ):</label><input type="text" value="{{ v.monknameen }}" name="monknameen" /></p>
+      <p class="control-group"><label class="control-label">Monastic Name (In Thai  Script):</label><input type="text" value="{{ v.monknameth }}" name="monknameth" /></p>
+
+      <p class="control-group"><label class="control-label">Date of Ordination(BE.Buddhist Calendar,e.g.:2553-07-21):</label><input type="date" value="{{ v.ordinationdate}}" name="ordinationdate" /></p>
+      <p class="control-group"><label class="control-label">Place of Ordination(The Temple You Ordain as Bhikkhu):</label><input type="text" value="{{ v.ordination_place}}" name="ordination_place" /></p>
+      <p class="control-group"><label class="control-label">Nationality(Country/Area of Origin):</label><input type="text" value="{{ v.countryarea}}" name="countryarea" /></p>
+      <p class="control-group"><label class="control-label">Ethnicity(Race of Origin):</label><input type="text" value="{{ v.nationrace}}" name="nationrace" /></p>
+      <p class="control-group"><label class="control-label">Religion:</label><input type="text" value="{{ v.religion}}" name="religion" /></p>
+
+      <p class="control-group"><label class="control-label">Native Language:</label><input type="text" value="{{ v.nativelanguage}}" name="nativelanguage" /></p>
+      <p class="control-group"><label class="control-label">Second Language:</label><input type="text" value="{{ v.second_language}}" name="second_language" /></p>
+      <p class="control-group"><label class="control-label">Other Language:</label><input type="text" value="{{ v.otherlanguage}}" name="otherlanguage" /></p>
+      
+      <p class="control-group"><label class="control-label">Place of Birth(City & Country):</label><input type="text" value="{{ v.place_of_birth}}" name="place_of_birth" /></p>
+      <p class="control-group"><label class="control-label">Registered Permanent Residence:</label><input type="text" value="{{ v.registered_permanent_residence}}" name="registered_permanent_residence" /></p>
+      <p class="control-group"><label class="control-label">Birthday(AD.Gregorian Calendar,e.g.:1983-07-10):</label><input type="date" value="{{ v.birthday}}" name="birthday" /></p>
+
+      <p class="control-group"><label class="control-label">Height(cm):</label><input type="text" value="{{ v.height}}" name="height" /></p>
+      <p class="control-group"><label class="control-label">Weight(kg):</label><input type="text" value="{{ v.weight}}" name="weight" /></p>
+      <p class="control-group"><label class="control-label">Skin Color:</label><input type="text" value="{{ v.skincolor}}" name="skincolor" /></p>
+      <p class="control-group"><label class="control-label">Noticeable Tattoo:</label><textarea name="tatto" rows="2" cols="50" wrap="physical">{{ v.tatto }}</textarea></p>
+      <p class="control-group"><label class="control-label">Mark or Scar on your Body:</label><textarea name="scar" rows="2" cols="50" wrap="physical">{{ v.scar }}</textarea></p>
+      <p class="control-group"><label class="control-label">Previous Occupation:</label><input type="text" value="{{ v.occupation}}" name="occupation" /></p>  
+      <p class="control-group"><label class="control-label">Marital Status:</label><input type="text" value="{{ v.maritalstatus}}" name="maritalstatus" /></p>
+      <p class="control-group"><label class="control-label">Father Name(First Name and Last Name):</label><input type="text" value="{{ v.fathername}}" name="fathername" /></p>
+      <p class="control-group"><label class="control-label">Father's Nationality (Country of Origin):</label><input type="text" value="{{ v.fathername}}" name="fathername" /></p>
+      <p class="control-group"><label class="control-label">Father's Date of Birth:</label><input type="date" value="{{ v.father_birthday}}" name="father_birthday" /></p>
+      <p class="control-group"><label class="control-label">Mother Name(First Name and Last Name):</label><input type="text" value="{{ v.mothername}}" name="mothername" /></p>
+      <p class="control-group"><label class="control-label">Mother's Nationality (Country of Origin):</label><input type="text" value="{{ v.mother_nationality}}" name="mother_nationality" /></p>
+      <p class="control-group"><label class="control-label">Mother's Date of Birth:</label><input type="date" value="{{ v.mother_birthday}}" name="mother_birthday" /></p>
+
+
+      <p class="control-group"><label class="control-label">Email Address:</label><input type="text" value="{{ v.email}}" name="email" /></p>
+      <p class="control-group"><label class="control-label">Mobile Phone (In Thailand):</label><input type="text" value="{{ v.mobilphone}}" name="mobilphone" /></p>
+
+      <p class="control-group"><label class="control-label">Current Home Address:</label><input type="text" value="{{ v.current_home_address}}" name="current_home_address" /></p>
+      <p class="control-group"><label class="control-label">City:</label><input type="text" value="{{ v.home_city}}" name="home_city" /></p>
+      <p class="control-group"><label class="control-label">State/Province:</label><input type="text" value="{{ v.home_state}}" name="home_state" /></p>
+      <p class="control-group"><label class="control-label">Country:</label><input type="text" value="{{ v.home_country}}" name="home_country" /></p>
+      <p class="control-group"><label class="control-label">Zip Code:</label><input type="text" value="{{ v.home_zip_code}}" name="home_zip_code" /></p>
+      <p class="control-group"><label class="control-label">Home Phone(Country Code-Phone Code):</label><input type="text" value="{{ v.home_phone}}" name="home_phone" /></p>
+      <p class="control-group"><label class="control-label">Name of Emergency Contact Person:</label><input type="text" value="{{ v.name_of_emergency_person}}" name="name_of_emergency_person" /></p>
+      <p class="control-group"><label class="control-label">Relationship:</label><input type="text" value="{{ v.relationship_with_emergency_person}}" name="relationship_with_emergency_person" /></p>
+      <p class="control-group"><label class="control-label">Home Address:</label><input type="text" value="{{ v.emergency_person_home_address }}" name="emergency_person_home_address" /></p>
+      <p class="control-group"><label class="control-label">City:</label><input type="text" value="{{ v.emergency_person_city}}" name="emergency_person_city" /></p>
+      <p class="control-group"><label class="control-label">State/Province:</label><input type="text" value="{{ v.emergency_person_state}}" name="emergency_person_state" /></p>
+      <p class="control-group"><label class="control-label">Country:</label><input type="text" value="{{ v.emergency_person_country}}" name="emergency_person_country" /></p>
+      <p class="control-group"><label class="control-label">Zip Code:</label><input type="text" value="{{ v.emergency_person_zip_code}}" name="emergency_person_zip_code" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Phone(Country Code-Phone Code):</label><input type="text" value="{{ v.emergencyphone}}" name="emergencyphone" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Email Address :</label><input type="text" value="{{ v.emergency_person_email}}" name="emergency_person_email" /></p>
+
+      
+      
+      <p class="control-group"><label class="control-label">Highest Educational Level Completed :</label><textarea  name="education"  rows="2" cols="50" wrap="physical">{{ v.education}}</textarea> </p>
+      <p class="control-group"><label class="control-label">Year of Completion:</label><input type="text" value="{{ v.highest_education_year_of_completion}}" name="highest_education_year_of_completion" /></p>
+      <p class="control-group"><label class="control-label">Major:</label><input type="text" value="{{ v.highest_education_major}}" name="highest_education_major" /></p>
+      <p class="control-group"><label class="control-label">Name of Institution:</label><textarea  name="highest_education_institution_name"  rows="2" cols="50" wrap="physical">{{ v.highest_education_institution_name}}</textarea> </p>
+      <p class="control-group"><label class="control-label">Country:</label><input type="text" value="{{ v.highest_education_country}}" name="highest_education_country" /></p>
+      <p class="control-group"><label class="control-label">Other Education Background:</label><textarea  name="other_education"  rows="2" cols="50" wrap="physical">{{ v.other_education}}</textarea> </p>
+      <p class="control-group"><label class="control-label">Other Education Year of Completion:</label><input type="text" value="{{ v.other_education_year_of_completion}}" name="other_education_year_of_completion" /></p>
+      <p class="control-group"><label class="control-label">Other Education Major:</label><input type="text" value="{{ v.other_education_major}}" name="other_education_major" /></p>
+      <p class="control-group"><label class="control-label">Other Education Name of Institution:</label><textarea  name="other_education_institution_name"  rows="2" cols="50" wrap="physical">{{ v.other_education_institution_name}}</textarea> </p>
+      <p class="control-group"><label class="control-label">Other Education Country:</label><input type="text" value="{{ v.other_education_country}}" name="other_education_country" /></p>
+
+
+
+      <p class="control-group"><label class="control-label">Passport Number:</label><input type="text" value="{{ v.passport_number}}" name="passport_number" /></p>
+      <p class="control-group"><label class="control-label">Passport Issue Date:</label><input type="date" value="{{ v.passport_issue_date}}" name="passport_issue_date" /></p>
+      <p class="control-group"><label class="control-label">Passport Expiration Date:</label><input type="date" value="{{ v.passport_expiration_date}}" name="passport_expiration_date" /></p>      
+
+
+
+      <p class="control-group"><label class="control-label">Reside in or Outside:</label><select name="inout"><option value="Residein" seclected="seclected" >Reside in</option><option value="Outside">Outside</option></select></p>
+
+      <p class="control-group"><label class="control-label"></label><input type="submit" value="Update"></p>
+      </div>
+    </form>
+
+{% endblock %}
+
+
+

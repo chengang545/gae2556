@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+    <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
+
+{% block divmain %}
+    <form action="/add" enctype="multipart/form-data" method="post" class="form-horizontal">
+      <div class="controls">
+      <p class="control-group"><label class="control-label">Name (First Name & Last Name in English on Passport):</label><input type="text" name="nameen" /></p>
+      <p class="control-group"><label class="control-label">Name (First Name and Last Name in Thai  Script):</label><input type="text" name="nameth" /></p>
+      <p class="control-group"><label class="control-label">Monastic Name (In Pali-Latin Script )</label><input type="text" name="monknameen" /></p>
+      <p class="control-group"><label class="control-label">Monastic Name (In Thai  Script)</label><input type="text" name="monknameth" /></p>
+      <p class="control-group"><label class="control-label">Date of Ordination:</label><input type="date" name="ordinationdate" />(BE.Buddhist Calendar,e.g.:2553-07-21)</p>
+      <p class="control-group"><label class="control-label">Place of Ordination(The Temple You Ordain as Bhikkhu):</label><input type="text" name="ordination_place" /></p>
+      <p class="control-group"><label class="control-label">Country/Area:</label><input type="text" name="countryarea" /></p>
+      <p class="control-group"><label class="control-label">Nationality(Country of Origin):</label><input type="text" name="nationrace" /></p>
+      <p class="control-group"><label class="control-label">Ethnicity(Race of Origin):</label><input type="text" name="religion" /></p>
+      <p class="control-group"><label class="control-label">Native Language:</label><input type="text" name="nativelanguage" /></p>
+      <p class="control-group"><label class="control-label">Second Language:</label><input type="text" name="second_language" /></p>
+      <p class="control-group"><label class="control-label">Other Language:</label><input type="text" name="otherlanguage" /></p>
+      <p class="control-group"><label class="control-label">Place of Birth(City & Country):</label><input type="text" name="place_of_birth" /></p>
+      <p class="control-group"><label class="control-label">Registered Permanent Residence:</label><input type="text" name="registered_permanent_residence" /></p>
+      <p class="control-group"><label class="control-label">Birthday:</label><input type="date" name="birthday" />(AD.Gregorian Calendar,e.g.:1983-07-10)</p>
+      <p class="control-group"><label class="control-label">Height(cm):</label><input type="text" name="height" /></p>
+      <p class="control-group"><label class="control-label">Weight(kg):</label><input type="text" name="weight" /></p>
+      <p class="control-group"><label class="control-label">Skin Color:</label><input type="text" name="skincolor" /></p>
+      <p class="control-group"><label class="control-label">Noticeable Tattoo:</label><textarea name="tatto"  rows="2" cols="50" wrap="physical"></textarea></p>
+      <p class="control-group"><label class="control-label">Mark or Scar on your Body:</label><textarea name="scar"  rows="2" cols="50" wrap="physical"></textarea></p>
+      <p class="control-group"><label class="control-label">Previous Occupation:</label><input type="text" name="occupation" /></p>  
+      <p class="control-group"><label class="control-label">Marital Status:</label><input type="text" name="maritalstatus" /></p>
+      <p class="control-group"><label class="control-label">Father Name(First Name and Last Name):</label><input type="text" name="fathername" /></p>
+      <p class="control-group"><label class="control-label">Father's Nationality (Country of Origin):</label><input type="text" name="father_nationality" /></p>
+      <p class="control-group"><label class="control-label">Father's Date of Birth:</label><input type="text" name="father_birthday" /></p>
+      <p class="control-group"><label class="control-label">Mother Name(First Name and Last Name):</label><input type="text" name="mothername" /></p>
+      <p class="control-group"><label class="control-label">Mother's Nationality (Country of Origin):</label><input type="text" name="mother_nationality" /></p>
+      <p class="control-group"><label class="control-label">Mother's Date of Birth:</label><input type="text" name="mother_birthday" /></p>
+
+      <p class="control-group"><label class="control-label">Email Address:</label><input type="text" name="email" /></p>
+      <p class="control-group"><label class="control-label">Mobile Phone (In Thailand):</label><input type="text" name="mobilphone" /></p>
+      <p class="control-group"><label class="control-label">Current Home Address:</label><input type="text" name="current_home_address" /></p>
+      <p class="control-group"><label class="control-label">City:</label><input type="text" name="home_city" /></p>
+      <p class="control-group"><label class="control-label">State/Province:</label><input type="text" name="home_state" /></p>
+      <p class="control-group"><label class="control-label">Country:</label><input type="text" name="home_country" /></p>
+      <p class="control-group"><label class="control-label">Zip Code:</label><input type="text" name="home_zip_code" /></p>
+      <p class="control-group"><label class="control-label">Home Phone(Country Code-Phone Code):</label><input type="text" name="home_phone" /></p>
+      <p class="control-group"><label class="control-label">Name of Emergency Contact Person:</label><input type="text" name="name_of_emergency_person" /></p>
+      <p class="control-group"><label class="control-label">Relationship:</label><input type="text" name="relationship_with_emergency_person" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Home Address:</label><input type="text" name="emergency_person_home_address" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person City:</label><input type="text" name="emergency_person_city" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person State/Province:</label><input type="text" name="emergency_person_state" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Country:</label><input type="text" name="emergency_person_country" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Zip Code:</label><input type="text" name="emergency_person_zip_code" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Phone(Country Code-Phone Code):</label><input type="text" name="emergencyphone" /></p>
+      <p class="control-group"><label class="control-label">Emergency Contact Person Email Address :</label><input type="text" name="emergency_person_email" /></p>
+
+      <p class="control-group"><label class="control-label">Highest Educational Level Completed :</label><textarea name="education"  rows="2" cols="50" wrap="physical"></textarea> </p>
+      <p class="control-group"><label class="control-label">Year of Completion:</label><input type="text" name="highest_education_year_of_completion" /></p>
+      <p class="control-group"><label class="control-label">Major:</label><input type="text" name="highest_education_major" /></p>
+      <p class="control-group"><label class="control-label">Name of Institution:</label><textarea name="highest_education_institution_name"  rows="2" cols="50" wrap="physical"></textarea>
+      <p class="control-group"><label class="control-label">Country:</label><input type="text" name="highest_education_country" /></p>
+      <p class="control-group"><label class="control-label">Other Education Background:</label><textarea name="other_education"  rows="2" cols="50" wrap="physical"></textarea></p>
+      <p class="control-group"><label class="control-label">Other Education Year of Completion:</label><input type="text" name="other_education_year_of_completion" /></p>
+      <p class="control-group"><label class="control-label">Other Education Major:</label><input type="text" name="other_education_major" /></p>
+      <p class="control-group"><label class="control-label">Other Education Name of Institution:</label><textarea name="other_education_institution_name"  rows="2" cols="50" wrap="physical"></textarea></p>
+      <p class="control-group"><label class="control-label">Other Education Country:</label><input type="text" name="other_education_country" /></p>
+
+      <p class="control-group"><label class="control-label">Passport Number:</label><input type="text" name="passport_number" /></p>
+      <p class="control-group"><label class="control-label">Passport Issue Date:</label><input type="text" name="passport_issue_date" /></p>
+      <p class="control-group"><label class="control-label">Passport Expiration Date:</label><input type="text" name="passport_expiration_date" /></p>
+       <p class="control-group"><label class="control-label">Reside in or Outside:</label><select name="inout"><option value="Residein" seclected="seclected" >Reside in</option><option value="Outside">Outside</option></select></p>      
+          
+      <!--<p class="control-group"><label class="control-label">Photo:</label><input type="file" name="photo" /></p>
+      <p class="control-group"><label class="control-label">Passport:</label><input type="file" name="passport" /></p>-->
+  
+      <p class="control-group"><label class="control-label"></label><input type="submit" value="Update IDOP Member"></p>
+      </div>
+    </form>
+
+    <a href="{{ url }}">{{ url_linktext }}</a>
+{% endblock %}
+
+
+

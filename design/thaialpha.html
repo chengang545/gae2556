@@ -1,0 +1,50 @@
+﻿{% extends 'base.html' %}
+
+{% block css %}
+static/thaialpha
+{% endblock %}
+
+
+
+
+
+{% block body %}
+<div>
+<table>
+	<tr class= 'title' >
+			<td colspan='2'>Thai Alpha</td> <!--50 together-->
+		</tr>
+	<tr class= 'riqi'>
+		<th colspan='1'>Front Tongue</th><th colspan='1'>Root Tongue</th>
+	</tr>
+	<tr class= 'riqi'>
+		<th colspan='1'><img src="static/fronttongue.jpg"></th><th colspan='1'><img src="static/roottongue.jpg"></th>
+	</tr>
+{% for g in mings %}
+		<tr class= {% cycle 'huid','naid' %} > <!--one by one change in loops-->
+			<td colspan='1' class= {% cycle 'name','name2' %} >{{ g.0.0}}</td><td>{{ g.1.0 }}</td>
+		</tr>
+	    <tr class= {% cycle 'hui','nai' %} > <!--one by one change in loops-->
+			<td colspan='1' class= {% cycle 'name','name2' %} >{{ g.0.1}}</td><td>{{ g.1.1}}</td>
+		</tr>
+
+{% endfor %}
+        <tr class= 'huid'> <!--one by one change in loops-->
+			<td colspan='1' class='name'>- -่</td>่่่้้<td>-้ -๊ -๋๋</td>
+		</tr>
+	    <tr class='hui'> <!--one by one change in loops-->
+			<td colspan='1' class='name'></td><td></td>
+		</tr>
+		<tr class= 'nai'> <!--one by one change in loops-->
+			<td colspan='2' class='name2'>ขฆฉถฐผฝสษศห</td>
+		</tr>
+		<tr class= 'title' >
+			<td colspan='2'>กี กู เก โก</td> <!--50 together-->
+		</tr>
+</table>
+
+
+</div>
+
+{% endblock %}
+ 

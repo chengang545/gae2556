@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+    {% block documentname %}{% endblock %}
+
+
+{% block divmain %}
+
+<h3>Part 1: Personal Information</h3>
+<table class="table table-bordered">
+	<tr><td><img class="img-rounded img-thumb" src="/img?img_id={{ w.key }}" /></td><td><img class="img-rounded img-thumb" src="/passport?passport_id={{ w.key }}" /></td></tr>
+      <tr><td>Name (First Name & Last Name in English on Passport):</td><td>{{ w.nameen|escape  }}</td></tr>
+      <tr><td>Name (First Name and Last Name in Thai  Script):</td><td>{{ w.nameth|escape  }}</td></tr>
+      <tr><td>Monastic Name (In Pali-Latin Script )</td><td>{{ w.monknameen|escape  }}</td></tr>
+      <tr><td>Monastic Name (In Thai  Script)</td><td>{{ w.monknameth|escape  }}</td></tr>
+      <tr><td>Date of Ordination:</td><td>{{ w.ordinationdate|escape}} (Y/M/D BE.)</td></tr>
+      <tr><td>Place of Ordination(The Temple You Ordain as Bhikkhu):</td><td>{{ w.ordination_place|escape}}</td></tr>
+      <tr><td>Nationality(Country/Area of Origin):</td><td>{{ w.countryarea|escape}}</td></tr>
+      <tr><td>Ethnicity(Race of Origin):</td><td>{{ w.nationrace|escape}}</td></tr>
+      <tr><td>Religion:</td><td>{{ w.religion|escape}}</td></tr>
+      <tr><td>Native Language:</td><td>{{ w.nativelanguage|escape}}</td></tr>
+      <tr><td>Second Language:</td><td>{{ w.second_language|escape}}</td></tr>
+      <tr><td>Other Language:</td><td>{{ w.otherlanguage|escape}}</td></tr> 
+      <tr><td>Place of Birth(City & Country):</td><td>{{ w.place_of_birth|escape}}</td></tr>
+      <tr><td>Registered Permanent Residence:</td><td>{{ w.registered_permanent_residence|escape}}</td></tr>
+      <tr><td>Birthday:</td><td>{{ w.birthday|escape}} (Y/M/D AD.)</td></tr>
+      <tr><td>Height(cm):</td><td>{{ w.height|escape}}</td></tr>
+      <tr><td>Weight(kg):</td><td>{{ w.weight|escape}}</td></tr>
+      <tr><td>Skin Color:</td><td>{{ w.skincolor|escape}}</td></tr>
+      <tr><td>Noticeable Tattoo:</td><td>{{ w.tatto|escape}}</td></tr>
+      <tr><td>Mark or Scar on your Body:</td><td>{{ w.scar|escape}}</td></tr>
+      <tr><td>Previous Occupation:</td><td>{{ w.occupation|escape}}</td></tr>  
+      <tr><td>Marital Status:</td><td>{{ w.maritalstatus|escape}}</td></tr>
+      <tr><td>Father Name(First Name and Last Name):</td><td>{{ w.fathername|escape}}</td></tr>
+      <tr><td>Father's Nationality (Country of Origin):</td><td>{{ w.fathername|escape}}</td></tr>
+      <tr><td>Father's Date of Birth:</td><td>{{ w.father_birthday|escape}} (Y/M/D AD.)</td></tr>
+      <tr><td>Mother Name(First Name and Last Name):</td><td>{{ w.mothername|escape}}</td></tr>
+      <tr><td>Mother's Nationality (Country of Origin):</td><td>{{ w.mother_nationality|escape}}</td></tr>
+      <tr><td>Mother's Date of Birth:</td><td>{{ w.mother_birthday|escape}} (Y/M/D AD.)</td></tr>
+</table>
+<h3>Part 2: Contact Information</h3>
+<table class="table table-bordered">
+      <tr><td>Email Address:</td><td>{{ w.email|escape}}</td></tr>
+      <tr><td>Mobile Phone (In Thailand):</td><td>{{ w.mobilphone|escape}}</td></tr>
+      <tr><td>Current Home Address:</td><td>{{ w.current_home_address|escape}}</td></tr>
+      <tr><td>City:</td><td>{{ w.home_city|escape}}</td></tr>
+      <tr><td>State/Province:</td><td>{{ w.home_state|escape}}</td></tr>
+      <tr><td>Country:</td><td>{{ w.home_country|escape}}</td></tr>
+      <tr><td>Zip Code:</td><td>{{ w.home_zip_code|escape}}</td></tr>
+      <tr><td>Home Phone(Country Code-Phone Code):</td><td>{{ w.home_phone|escape}}</td></tr>
+      <tr><td>Name of Emergency Contact Person:</td><td>{{ w.name_of_emergency_person|escape}}</td></tr>
+      <tr><td>Relationship:</td><td>{{ w.relationship_with_emergency_person|escape}}</td></tr>
+      <tr><td>Emergency Contact Person Home Address:</td><td>{{ w.emergency_person_home_address|escape}}</td></tr>
+      <tr><td>Emergency Contact Person City:</td><td>{{ w.emergency_person_city|escape}}</td></tr>
+      <tr><td>Emergency Contact Person State/Province:</td><td>{{ w.emergency_person_state|escape}}</td></tr>
+      <tr><td>Emergency Contact Person Country:</td><td>{{ w.emergency_person_country|escape}}</td></tr>
+      <tr><td>Emergency Contact Person Zip Code:</td><td>{{ w.emergency_person_zip_code|escape}}</td></tr>
+      <tr><td>Emergency Contact Person Phone(Country Code-Phone Code):</td><td>{{ w.emergencyphone|escape}}</td></tr>
+      <tr><td>Emergency Contact Person Email Address :</td><td>{{ w.emergency_person_email|escape}}</td></tr>
+</table>
+<h3>Part 3: Educational Information</h3> 
+<table class="table table-bordered">
+      <tr><td>Highest Educational Level Completed :</td><td>{{ w.education|escape}}</textarea> </p>
+      <tr><td>Year of Completion:</td><td>{{ w.highest_education_year_of_completion|escape}}</td></tr>
+      <tr><td>Major:</td><td>{{ w.highest_education_major|escape}}</td></tr>
+      <tr><td>Name of Institution:</td><td>{{ w.highest_education_institution_name|escape}}</td></tr>
+      <tr><td>Country:</td><td>{{ w.highest_education_country|escape}}</td></tr>
+      <tr><td>Other Education Background:</td><td>{{ w.other_education|escape}}</td></tr>
+      <tr><td>Other Education Year of Completion:</td><td>{{ w.other_education_year_of_completion|escape}}</td></tr>
+      <tr><td>Other Education Major:</td><td>{{ w.other_education_major|escape}}</td></tr>
+      <tr><td>Other Education Name of Institution:</td><td>{{ w.other_education_institution_name|escape}}</td></tr>
+      <tr><td>Other Education Country:</td><td>{{ w.other_education_country|escape}}</td></tr>
+</table>
+<h3>Part 4: Thailand Entry Information</h3>
+<table class="table table-bordered">
+      <tr><td>Passport Number:</td><td>{{ w.passport_number|escape}}</td></tr>
+      <tr><td>Passport Issue Date:</td><td>{{ w.passport_issue_date|escape}}</td></tr>
+      <tr><td>Passport Expiration Date:</td><td>{{ w.passport_expiration_date|escape}}</td></tr>      
+      
+</table>
+
+
+
+{% endblock %}

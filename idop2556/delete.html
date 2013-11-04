@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+    <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
+
+{% block divmain %}
+    <p>Do you want delete all information of {{ v.nameen }}?</p>
+    <form action="/delete" method="POST">
+    <input type="hidden" value="{{ v.key }}" name="id">
+    <a class="btn btn-primary" href ="/">No</a>
+    <input  class="btn btn-danger" type=submit value="delete"/>
+    </form>
+{% endblock %}
+
+
+

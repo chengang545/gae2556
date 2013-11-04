@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/bootstrap.css" />
+  <style type="text/css">
+
+   .container{
+           background-color: #ffffff;
+    }
+   .img-thumb{
+      width:60px;}   
+   </style>
+</head>
+  <body>
+ <div class="container-fluid">
+  <h1 >IDOP Database</h1>
+  <div class="navbar navbar-inner">
+    <div class="nav-collapse" style="height:auto;">
+      <ul class="nav">
+        <li class="active"><a hres="#">Unofficial</a></li>
+      </ul>
+     </div>
+   </div>
+
+
+ <div id="content" class="row-fluid">
+   <div class="span10 main">
+    <h2>{% block documentname %}{% endblock %}</h2>
+    {% block divmain %}{% endblock %}
+   </div>
+
+<div class="span2 siderbar">
+     <h2>Document List</h2>
+     <ul class="nav nav-tabs nav-stacked">
+      <li><a href="/info">Information</a></li>
+      <li><a href="/contacts">Contacts</a></li> 
+      <li><a href="/downphoto">Download Photo</a></li>   
+      <li><a href="/downpassport">Download Passport</a></li> 
+      <li><a href="/admin">Admin</a></li>    
+</ul>
+ </div>
+
+
+
+</div>
+  </body>
+</html>

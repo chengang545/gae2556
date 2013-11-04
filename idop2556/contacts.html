@@ -1,0 +1,17 @@
+﻿{% extends 'base.html' %}
+    <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
+{% block divmain %}
+
+<table class="table table-bordered">
+<tr><th>Name</th><th>Mobilphone</th><th>E-mail</th>
+{% for person in persons %}
+<tr><td>Phra {{ person.nameen|escape }}</td><td>{{person.mobilphone|escape }}<td>{{ person.email|escape }}</td></td></tr>
+
+
+{% endfor %}
+</table>
+
+{% endblock %}
+
+
+

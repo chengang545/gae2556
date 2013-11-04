@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+    <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
+
+{% block divmain %}
+    <form action="/changepassport" enctype="multipart/form-data" method="post" class="form-horizontal">
+      <input type="hidden" value="{{ v.key }}" name="id">
+      <div class="controls">
+      <p class="control-group"><label class="control-label">Passport:</label><input type="file" name="passport" /></p>
+      <p class="control-group"><label class="control-label"></label><input type="submit" value="Updatepassport"></p>
+      </div>
+    </form>
+{% endblock %}
+
+
+

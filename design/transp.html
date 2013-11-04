@@ -1,0 +1,32 @@
+﻿{% extends 'base.html' %}
+
+{% block css %}
+static/transp
+{% endblock %}
+
+
+
+
+
+{% block body %}
+<div>
+<table>
+	<tr class= 'title' >
+			<td colspan='50'>IDOP11 Rains Retreat 2013 Availability Chart</td> <!--50 together-->
+		</tr>
+	<tr class= 'riqi'>
+		<th>Bhikkhu</th><th>Reside In</th><th>Outside</th><th>Location</th><th>Return Date</th>
+	</tr>
+{% for g in mings %}
+		<tr class= {% cycle 'hui','nai' %} > <!--one by one change in loops-->
+			<td class= {% cycle 'name','name2' %} >{{g}}</td><td></td><td></td><td></td><td></td>
+		</tr>
+	
+{% endfor %}
+</table>
+
+
+</div>
+
+{% endblock %}
+ 
