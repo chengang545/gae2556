@@ -10,25 +10,3 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-- kind: Article
-  properties:
-  - name: is_for_sidebar
-  - name: is_page
-  - name: title
-
-- kind: Article
-  properties:
-  - name: is_page
-  - name: created
-    direction: desc
-
-- kind: Article
-  properties:
-  - name: is_page
-  - name: title
-
-
-- kind: Article
-  properties:
-  - name: is_page
-  - name: title

@@ -1,0 +1,32 @@
+body{
+	margin:5% 10% 10% 10%;
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif,Simsun;
+}
+
+#title{
+	text-align: center;
+	color: orange;
+
+}
+
+
+.twolist{
+    display: flex;
+	justify-content:space-around;
+
+}
+
+.everylist{
+	flex: 1;
+	width: 100%;
+	text-align: center;
+    list-style-position: inside;
+}
+
+a{
+	text-decoration: none;
+}
+
+.artical{
+	margin: 5% 10% 10% 10%;
+}
