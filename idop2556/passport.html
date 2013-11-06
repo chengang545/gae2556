@@ -2,9 +2,13 @@
     <h2>{% block documentname %}{{ add }}{% endblock %}</h2>
 {% block divmain %}
     <table class="table table-hover table-condensed">
-    <tr><th>Name</th><th>Passport</th></tr>
+    <tr><th>Name</th><th>No.</th><th>Expiration Date</th><th>Passport</th></tr>
     {% for idopmember in idopmembers %}
-    <tr><td>Phra {{ idopmember.nameen|escape }}</td><td><a href="/passport?passport_id={{ idopmember.key }}">download</a></td></tr>
+    <tr><td>Phra {{ idopmember.nameen|escape }}</td>
+    	<td>{{ idopmember.passport_number|escape }}</td>
+    	<td>{{ idopmember.passport_expiration_date|escape }}</td>
+    	<td><a href="/passport?passport_id={{ idopmember.key }}">download</a></td>
+    </tr>
     {% endfor %}
     </table>
 
